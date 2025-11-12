@@ -13,6 +13,30 @@ const Register = () => {
         console.log("Email:", email);
         console.log("Password:", password);
         console.log("Confirm Password:", confirmPassword);
+        
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (!emailRegex.test(email)) {
+            console.log("Email pattern doesn't match!");
+            alert("Email pattern doesn't match!");
+            return;
+        };
+        
+        if (password !== confirmPassword) {
+            console.log("Password doesn't match!");
+            alert("Password doesn't match!");
+            return;
+        };
+        
+        const userData = { name, email, password };
+        localStorage.setItem("user", JSON.stringify(userData));
+        
+        alert("Registration successful!");
+        setName("");
+        setEmail("");
+        setPassword("");
+        setConfirmPassword("");
+        
     };
 
     return(

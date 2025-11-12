@@ -9,6 +9,32 @@ const Login = () => {
         e.preventDefault();
         console.log("Email:", email);
         console.log("Password:", password);
+
+        const storedData = JSON.parse(localStorage.getItem("user"));
+
+        if (!storedData) {
+            console.log("No user found!");
+            alert("No user found!");
+            return;
+        }
+
+        if (email !== storedData.email) {
+            console.log("Email doesn't match!");
+            alert("Email doesn't match!");
+            return;
+        }
+
+        if (password !== storedData.password) {
+            console.log("Password doesn't match!");
+            alert("Password doesn't match!");
+            return;
+        }
+
+        console.log("Login successful!");
+        alert("Login successful!");
+        setEmail("");
+        setPassword(""); 
+
     };
 
     return(
