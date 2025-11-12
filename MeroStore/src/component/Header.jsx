@@ -3,16 +3,16 @@ import { assets } from '../assets/assets.js';
 
 const Header = () => {
     return (
-        <div className="flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-10 bg-gradient-to-r from-green-50 to-green-100 rounded-2xl shadow-md">
+        <div className="w-full min-h-[90vh] flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 px-10 md:px-16 py-12 bg-gradient-to-r from-green-50 to-green-100 rounded-2xl shadow-lg">
             
-            <div className="flex-1 space-y-4 text-center md:text-left">
-                <p className="text-3xl md:text-4xl font-bold text-gray-800">Shop smarter with us</p>
-                <p className="text-gray-600 text-lg leading-relaxed max-w-md mx-auto md:mx-0">Explore quality products, amazing deals, and fast delivery all at your fingertips. Your one-stop online shopping destination!</p>
-                <button className="mt-4 bg-[#2e7d32] text-white px-6 py-2 rounded-full shadow hover:bg-green-700 transition duration-300">Start Shopping</button>
+            <div className="flex-1 space-y-5 text-center md:text-left md:pr-8">
+                <p className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">Shop smarter with us</p>
+                <p className="text-gray-600 text-lg leading-relaxed max-w-lg mx-auto md:mx-0">Explore quality products, amazing deals and fast delivery all at your fingertips. Your one-stop online shopping destination!</p>
+                <button className="mt-6 bg-[#2e7d32] text-white px-8 py-3 rounded-full shadow-md hover:bg-blue-700 transition duration-300">Start Shopping</button>
             </div>
 
-            <div className="flex-1 mt-8 md:mt-0">
-                <img src={assets.home} alt="home" className="w-full max-w-md mx-auto rounded-lg"/>
+            <div className="flex-1 flex justify-center">
+                <img src={assets.home} alt="home" className="w-full max-w-xl md:max-w-1xl rounded-xl drop-shadow-md"/>
             </div>
         </div>
     );
