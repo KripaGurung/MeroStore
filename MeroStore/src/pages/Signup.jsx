@@ -30,13 +30,13 @@ const Register = () => {
         
         const userData = { name, email, password };
         localStorage.setItem("user", JSON.stringify(userData));
-        
         alert("Registration successful!");
+        
         setName("");
         setEmail("");
         setPassword("");
         setConfirmPassword("");
-        
+
     };
 
     return(
