@@ -5,6 +5,7 @@ import Login from './pages/login.jsx';
 import Navbar from './component/Navbar.jsx';
 import Home from './pages/Home.jsx';
 import Footer from './component/Footer.jsx';
+import Product from './pages/product.jsx';
 
 function AppContent() {
   const location = useLocation();
@@ -19,6 +20,7 @@ function AppContent() {
         <Route path="/" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/product" element={<Product />} />
       </Routes>
 
     {!footerPaths.includes(location.pathname) && <Footer />}
