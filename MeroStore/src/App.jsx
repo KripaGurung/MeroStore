@@ -4,8 +4,7 @@ import Signup from './pages/Signup.jsx';
 import Login from './pages/login.jsx';
 import Navbar from './component/Navbar.jsx';
 import Home from './pages/Home.jsx';
-import Footer from './component/footer.jsx';
-
+import Footer from './component/Footer.jsx';
 
 function AppContent() {
   const location = useLocation();

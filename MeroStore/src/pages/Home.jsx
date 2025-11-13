@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from '../component/Header.jsx';
-import Footer from '../component/footer.jsx';
+import FeaturedProduct from '../component/FeaturedProduct.jsx';
 
 const Home = () => {
     return (
         <div>
             <Header />
-            <footer />
+            <FeaturedProduct />
         </div>
     )
 }

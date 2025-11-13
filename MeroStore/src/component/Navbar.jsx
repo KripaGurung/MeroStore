@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <div className="bg-white shadow-md sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto flex items-center justify-between py-3 px-6">
-            <img onClick={() => navigate("/")} src={assets.logo} alt="Logo" className="h-19 w-20 cursor-pointer transition-transform duration-200 hover:scale-105"/>
+            <img onClick={() => navigate("/")} src={assets.logo} alt="Logo" className="w-20 md:w-20 h-auto transition-transform duration-300 hover:scale-105 cursor-pointe"/>
             
             <ul className="flex space-x-8 text-gray-700 font-medium">
                 <li className="cursor-pointer hover:text-green-600 transition-colors duration-200">Home</li>
