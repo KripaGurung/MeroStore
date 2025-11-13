@@ -3,7 +3,7 @@ import { assets } from '../assets/assets.js';
 
 const Header = () => {
     return (
-        <div className="w-full min-h-[90vh] flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 px-10 md:px-16 py-12 bg-gradient-to-r from-green-50 to-green-100 rounded-2xl shadow-lg">
+        <div className="w-full min-h-[70vh] flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 px-10 md:px-16 py-12 bg-gradient-to-r from-green-50 to-green-100 rounded-2xl ">
             
             <div className="flex-1 space-y-5 text-center md:text-left md:pr-8">
                 <p className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">Shop smarter with us</p>
