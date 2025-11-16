@@ -25,7 +25,7 @@ const FeaturedProduct = () => {
                         <img src={product.image} alt={product.title} className="w-full h-48 object-contain bg-blue-50 p-4"/>
             
                         <div className="p-4 text-left">
-                            <div className="flex items-center gap-2 text-sm text-green-500 mb-2">
+                            <div className="flex items-center gap-2 text-sm text-grey-500 mb-2">
                                 <p className="w-2 h-2 bg-green-500 rounded-full"></p><p>Available</p>
                             </div>
                             <p className="text-gray-900 text-lg font-medium truncate mb-1">{product.title}</p>
