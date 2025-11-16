@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const Product = () => {
 
     const [products, setProducts] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState("all");
     const [searchText, setSearchText] = useState("");
+
+    const navigate = useNavigate();
+
 
     useEffect(() => {
         fetch("https://fakestoreapi.com/products")
@@ -70,7 +74,7 @@ const Product = () => {
                             <p className="text-gray-700 text-sm mb-3 text-justify line-clamp-3">{product.description}</p>
 
                             <div className="flex justify-between mt-auto">
-                                <button className="border border-green-300 text-gray-700 px-3 py-1 rounded-md text-sm hover:bg-green-100">View Details</button>
+                                <button onClick={() => navigate(`/product/${product.id}`)} className="border border-green-300 text-gray-700 px-3 py-1 rounded-md text-sm hover:bg-green-100">View Details</button>
                                 <button onClick={() => handleAddToCart(product)} className="bg-[#2e7d32] text-white px-3 py-1 rounded-md text-sm hover:bg-green-700">Add to cart</button>
                             </div>
                         </div>
