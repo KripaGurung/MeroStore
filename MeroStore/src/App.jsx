@@ -6,6 +6,7 @@ import Navbar from './component/Navbar.jsx';
 import Home from './pages/Home.jsx';
 import Footer from './component/Footer.jsx';
 import Product from './pages/product.jsx';
+import Cart from './pages/cart.jsx';
 
 function AppContent() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function AppContent() {
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/product" element={<Product />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
 
     {!footerPaths.includes(location.pathname) && <Footer />}
