@@ -19,8 +19,8 @@ function AppContent() {
     {!navbarPaths.includes(location.pathname) && <Navbar />}
 
       <Routes>
-        <Route path="/" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Signup />} />
         <Route path="/home" element={<Home />} />
         <Route path="/product" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
