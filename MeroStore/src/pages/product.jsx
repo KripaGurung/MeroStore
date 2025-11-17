@@ -39,6 +39,7 @@ const Product = () => {
         return matchSearch && matchCategory;
     });
 
+
     return (
         <div className="min-h-screen px-6 py-8 bg-white flex flex-col items-center">
             <div className="flex gap-3 items-center mb-8">
@@ -58,20 +59,20 @@ const Product = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {filteredProducts.map((product) => (
-                    <div key={product.id} className="border border-green-200 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all bg-gray-50 flex flex-col">
+                    <div key={product.id} className="border border-green-200 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all bg-gray-50 flex flex-col gap-5">
                         
                         <div className="h-48 bg-gray-200 flex items-center justify-center text-gray-400 text-sm">
-                            <img src={product.image} alt="image" className="h-full object-contain" />
+                            <img src={product.image} alt="image" className="h-48 w-96 object-scale-down" />
                         </div>
 
-                        <div className="p-4 flex flex-col flex-grow">
+                        <div className="p-4 flex flex-col flex-grow gap-3">
                             <div className="flex items-center justify-between mb-2">
                                 <span className="text-gray-500 text-xs">${product.price}</span>
                                 <span className="text-gray-500 text-xs">{product.category}</span>
                             </div>
 
                             <p className="text-gray-800 font-semibold text-sm mb-2 line-clamp-1">{product.title}</p>
-                            <p className="text-gray-700 text-sm mb-3 text-justify line-clamp-3">{product.description}</p>
+                            {/* <p className="text-gray-700 text-sm mb-3 text-justify line-clamp-3">{product.description}</p> */}
 
                             <div className="flex justify-between mt-auto">
                                 <button onClick={() => navigate(`/product/${product.id}`)} className="border border-green-300 text-white-700 px-3 py-1 rounded-md text-sm hover:bg-green-400">View Details</button>

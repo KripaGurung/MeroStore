@@ -9,7 +9,7 @@ const Cart = () => {
     }, []);
     
     const handleRemove = (item) => {
-        const confirmDelete = window.confirm("Are you sure you want to remove this item?");
+        const confirmDelete = window.alert("Are you sure you want to remove this item?");
         if (!confirmDelete) {
             return;
         }
