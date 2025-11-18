@@ -36,7 +36,7 @@ const Product = () => {
 
         const matchSearch =
             search === "" ||
-            p.category.toLowerCase().includes(search);
+            p.category.toLowerCase().startsWith(search.toLowerCase());
 
         const matchCategory =
             selectedCategory === "all" ||

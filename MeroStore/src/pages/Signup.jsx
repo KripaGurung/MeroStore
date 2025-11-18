@@ -34,7 +34,7 @@ const Register = () => {
         const userData = { name, email, password };
         localStorage.setItem("user", JSON.stringify(userData));
         alert("Registration successful!");
-        navigate("/login"); 
+        navigate("/"); 
         
         setName("");
         setEmail("");
@@ -62,7 +62,7 @@ const Register = () => {
                     <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} id="confirmPassword" name="confirmPassword" placeholder="Confirm Your Password" required className="mb-6 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-400"/>
 
                     <button  type="submit" className="bg-[#2e7d32] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#27632a] transition duration-300">Sign Up</button>
-                    <p className="text-center text-gray-500 mt-4">Already have an account? <a href="/login" className="text-blue-500 ml-1 hover:text-blue-600 font-medium">Login</a></p>
+                    <p className="text-center text-gray-500 mt-4">Already have an account? <a href="/" className="text-blue-500 ml-1 hover:text-blue-600 font-medium">Login</a></p>
                 </form>
             </div>
         </div>

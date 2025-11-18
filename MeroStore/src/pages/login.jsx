@@ -54,7 +54,7 @@ const Login = () => {
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} id="password" name="password" placeholder="Enter Your Password" required className="mb-4 px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-green-400"/>
 
                      <button className="bg-[#2e7d32] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#27632a] transition duration-300">Login</button>
-                    <p className="text-center text-gray-500 mt-4">Don't have an account? <a href="/" className="text-blue-500 ml-1 hover:text-blue-600 font-medium">Sign Up</a></p>
+                    <p className="text-center text-gray-500 mt-4">Don't have an account? <a href="/signup" className="text-blue-500 ml-1 hover:text-blue-600 font-medium">Sign Up</a></p>
 
                 </form>
             </div>

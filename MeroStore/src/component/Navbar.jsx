@@ -26,7 +26,7 @@ const Navbar = () => {
               {storedUser.name}
             </p>
           ) : (
-            <button onClick={() => navigate("/login")} className="text-gray-700 border border-gray-300 rounded-lg px-4 py-2 hover:bg-gray-100 transition duration-200">Login</button>
+            <button onClick={() => navigate("/")} className="text-gray-700 border border-gray-300 rounded-lg px-4 py-2 hover:bg-gray-100 transition duration-200">Login</button>
           )}
         </div>
 
