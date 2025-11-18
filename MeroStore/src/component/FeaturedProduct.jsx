@@ -31,7 +31,7 @@ const FeaturedProduct = () => {
             
                 <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-5 px-3 sm:px-0">
                     {products.slice(0, 8).map((product) => (
-                    <div key={product.id} className="border border-gray-200 rounded-xl overflow-hidden hover:-translate-y-2 transition-all duration-300 bg-white shadow-sm">
+                    <div key={product.id} className="border border-gray-200 rounded-xl overflow-hidden hover:-translate-y-2 transition-all duration-300 bg-white shadow-sm ">
                         <img src={product.image} alt={product.title} className="w-full h-48 object-contain bg-gray-50 p-4"/>
             
                         <div className="p-4 text-left">

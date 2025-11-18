@@ -66,10 +66,10 @@ const Product = () => {
                 {filteredProducts.map((product) => (
                     <div key={product.id} className="border border-green-200 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all bg-gray-50 flex flex-col gap-5">
                         
-                        <div className="h-48 bg-gray-200 flex items-center justify-center text-gray-400 text-sm">
-                            <img src={product.image} alt="image" className="h-48 w-96 object-scale-down" />
-                        </div>
-
+                            <div className="bg-gray-50 h-52 flex items-center justify-center p-6">
+                                <img src={product.image} alt={product.title} className="object-contain max-h-full max-w-full"/>
+                            </div>
+                        
                         <div className="p-4 flex flex-col flex-grow gap-3">
                             <div className="flex items-center justify-between mb-2">
                                 <span className="text-gray-500 text-xs">${product.price}</span>
