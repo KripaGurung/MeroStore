@@ -10,8 +10,18 @@ const FeaturedProduct = () => {
     }, []);
     
     const handleAddToCart = (product) => {
-        console.log("Added to cart:", product.title);
-        alert(`${product.title} added to cart!`);
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        if (!cart.some((item) => item.id === product.id)) {
+            cart.push(product);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert(`${product.title} added to cart!`);
+        }
+    };
+    
+    const isInCart = (id) => {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        return cart.some((item) => item.id === id);
     };
     
     return (
@@ -21,16 +31,13 @@ const FeaturedProduct = () => {
             
                 <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-5 px-3 sm:px-0">
                     {products.slice(0, 8).map((product) => (
-                    <div key={product.id} className="border border-green-200 rounded-xl overflow-hidden hover:-translate-y-2 transition-all duration-300 bg-white shadow-sm">
-                        <img src={product.image} alt={product.title} className="w-full h-48 object-contain bg-blue-50 p-4"/>
+                    <div key={product.id} className="border border-gray-200 rounded-xl overflow-hidden hover:-translate-y-2 transition-all duration-300 bg-white shadow-sm">
+                        <img src={product.image} alt={product.title} className="w-full h-48 object-contain bg-gray-50 p-4"/>
             
                         <div className="p-4 text-left">
-                            <div className="flex items-center gap-2 text-sm text-grey-500 mb-2">
-                                <p className="w-2 h-2 bg-green-500 rounded-full"></p><p>Available</p>
-                            </div>
                             <p className="text-gray-900 text-lg font-medium truncate mb-1">{product.title}</p>
                             <p className="text-gray-600 text-sm mb-4">${product.price}</p>
-                            <button onClick={() => handleAddToCart(product)} className="bg-green-600 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300">Add to Cart</button>
+                            <button onClick={() => handleAddToCart(product)} disabled={isInCart(product.id)} className={`px-3 py-1 rounded-md text-sm ${isInCart(product.id) ? "bg-green-800 cursor-not-allowed text-white" : "bg-[#2e7d32] hover:bg-green-700 text-white"}`}>{isInCart(product.id) ? "Added " : "Add to cart"}</button>
                         </div>
                     </div>
                 ))}

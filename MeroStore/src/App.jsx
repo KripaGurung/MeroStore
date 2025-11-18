@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Signup from './pages/Signup.jsx';
 import Login from './pages/login.jsx';
+import Signup from './pages/Signup.jsx';
 import Navbar from './component/Navbar.jsx';
 import Home from './pages/Home.jsx';
 import Footer from './component/footer.jsx';
@@ -11,16 +11,16 @@ import ProductDetails from './pages/productDetails.jsx';
 
 function AppContent() {
   const location = useLocation();
-  const navbarPaths = ['/', '/login'];
-  const footerPaths = ['/', '/login'];
+  const navbarPaths = ['/', '/signup'];
+  const footerPaths = ['/', '/signup'];
 
   return (
     <>
     {!navbarPaths.includes(location.pathname) && <Navbar />}
 
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Signup />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<Home />} />
         <Route path="/product" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
