@@ -11,6 +11,21 @@ const ProductDetails = () => {
         .then((res) => res.json())
         .then((data) => setProduct(data));
     }, [id]);
+
+        const handleAddToCart = (product) => {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        if (!cart.some((item) => item.id === product.id)) {
+            cart.push(product);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert(`${product.title} added to cart!`);
+        }
+    };
+    
+    const isInCart = (id) => {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        return cart.some((item) => item.id === id);
+    };
     
     if (!product) {
         return <div className="text-center mt-10 text-gray-600">Loading...</div>;
@@ -27,7 +42,7 @@ const ProductDetails = () => {
                     <p className="text-justify text-gray-600 mb-4">{product.description}</p>
                     <p className="text-lg font-bold text-green-600 mb-3">$ {product.price}</p>
                         
-                    <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">Add to Cart</button>
+                    <button onClick={() => handleAddToCart(product)} disabled={isInCart(product.id)} className={`px-3 py-1 rounded-md text-sm ${isInCart(product.id) ? "bg-green-800 cursor-not-allowed text-white" : "bg-[#2e7d32] hover:bg-green-700 text-white"}`}>{isInCart(product.id) ? "Added " : "Add to cart"}</button>
                 </div>
             </div>
         </div>
