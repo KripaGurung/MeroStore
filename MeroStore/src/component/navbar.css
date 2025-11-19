@@ -1,0 +1,65 @@
+.navContainer {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    padding: 0 10px;
+    height: 60px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.Logo {
+    height: 80px;
+    width: auto;
+    cursor: pointer;
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+.navLinks li {
+    cursor: pointer;
+    padding: 5px 10px;
+    color: #333;
+}
+
+.navLinks li:hover {
+    color: #008236;
+}
+
+.navSection {
+    display: flex;
+    align-items: center;
+}
+
+.userName {
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.Button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.Button:hover {
+    background-color: #008236;
+}

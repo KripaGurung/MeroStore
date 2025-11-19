@@ -28,7 +28,7 @@
 }
 
 .shopButton {
-    background-color: #4CAF50;
+    background-color:#2e7d32;
     color: white;
     border: none;
     padding: 12px 30px;
@@ -38,7 +38,7 @@
 }
 
 .shopButton:hover {
-    background-color: #45a049;
+    background-color: #008236;
 }
 
 .imageContainer {
