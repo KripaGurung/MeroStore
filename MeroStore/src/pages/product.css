@@ -1,0 +1,132 @@
+.productContainer {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.searchAndFilter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.searchBox {
+    flex: 1;
+}
+
+.Search {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.filterBox {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+}
+
+.carContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.productCardContainer {
+    width: calc(25% - 20px);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.proTitle {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.productCard {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.productInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.productPrice {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
+.productCategory {
+    background-color: #f8f9fa;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.productText {
+    flex: 1;
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.buttonSection {
+    display: flex;
+    gap: 10px;
+}
+
+.buttonSection button:first-child {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #7cc56d;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.buttonSection button:first-child:hover {
+    background-color: #62a155;
+}
+
+.cartBtn.add {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #2e7d32;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.cartBtn.add:hover {
+    background-color: #1b5e20;
+}
+
+.cartBtn.added {
+    background-color: #4caf50;
+    color: white;
+    cursor: not-allowed;
+}

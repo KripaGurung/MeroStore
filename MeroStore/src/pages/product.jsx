@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import "./product.css"
 
 const Product = () => {
 
@@ -62,11 +63,11 @@ const Product = () => {
                 </select>
             </div>
 
-            <div className="">
+            <div className="carContainer">
                 {filteredProducts.map((product) => (
                     <div key={product.id} className="productCardContainer">
                         
-                            <div className="">
+                            <div className="imageCard">
                                 <img src={product.image} alt={product.title} className="proTitle"/>
                             </div>
                         
