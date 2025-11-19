@@ -53,7 +53,7 @@ const Product = () => {
                     <input type="text" placeholder="Search...."  className="flex-grow outline-none bg-transparent text-gray-700" value={searchText} onChange={(e) => setSearchText(e.target.value)}/>
                 </div>
 
-                <select className="border border-green-400 rounded-full px-3 py-2 shadow-sm" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
+                <select className="border-2 border-green-400 rounded-full px-4 py-2 shadow-sm" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
                     <option value="all">All</option>
                     <option value="men's clothing">Men</option>
                     <option value="women's clothing">Women</option>

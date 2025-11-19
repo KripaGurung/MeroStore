@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
 
             <div className="border-t border-gray-200 mt-10 pt-5 text-center text-gray-500 text-sm">
-                <p>Copyright © 2024 MeroStore. All Rights Reserved.</p>
+                <p>Copyright © 2025 MeroStore. All Rights Reserved.</p>
             </div>
         </div>
     );

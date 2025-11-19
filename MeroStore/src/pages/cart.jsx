@@ -18,7 +18,7 @@ const Cart = () => {
         setCartItems(updatedCart);
         localStorage.setItem("cart", JSON.stringify(updatedCart));
         console.log("Removed item:", item);
-        alert("Item removed!");
+        // alert("Item removed!");
     };
     
     const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
