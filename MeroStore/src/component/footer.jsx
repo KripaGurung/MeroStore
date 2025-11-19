@@ -10,7 +10,7 @@ const Footer = () => {
                     <div className="logoContainer">
                         <img src={assets.logo} alt="logo" className="image" />
                     </div>
-                    <p className="Sentence">Shop the best products with amazing deals and fast delivery. Our team is here to help you with any questions or support. Enjoy a simple, convenient, and enjoyable shopping experience!</p>
+                    <p className="Sentence">Shop the best products with amazing deals and fast delivery. Our team is here to help you with any questions or support and enjoy a simple, convenient, and enjoyable shopping experience !</p>
                 </div>
         
                 <div className="footerLinks">

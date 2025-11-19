@@ -1,0 +1,52 @@
+.headerContainer {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    background-color: #f0fdf4;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.textContainer {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.textOne {
+    font-size: 40px;
+    font-weight: bold;
+    color: #2d5016;
+    margin-bottom: 15px;
+}
+
+.textTwo {
+    font-size: 16px;
+    color: #4a7c2a;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.shopButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.shopButton:hover {
+    background-color: #45a049;
+}
+
+.imageContainer {
+    flex: 1;
+    text-align: center;
+}
+
+.imageContainer img {
+    max-width: 100%;
+    height: auto;
+}
