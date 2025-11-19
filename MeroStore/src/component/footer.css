@@ -1,0 +1,72 @@
+.mainContainer {
+    padding: 30px 20px 10px;
+    margin-top: 50px;
+}
+
+.footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.footerDescription {
+    flex: 1;
+    min-width: 300px;
+}
+
+.logoContainer {
+    margin-bottom: 15px;
+}
+
+.image {
+    height: 40px;
+}
+
+.Sentence {
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.footerLinks {
+    min-width: 150px;
+}
+
+.Heading {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.linkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linkList li {
+    margin-bottom: 8px;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.linkList li:hover {
+    color: #28a745;
+}
+
+.footerBottom {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.sentenceOne {
+    color: #666;
+    font-size: 14px;
+}
