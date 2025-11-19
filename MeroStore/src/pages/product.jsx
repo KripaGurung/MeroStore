@@ -46,14 +46,14 @@ const Product = () => {
     });
 
     return (
-        <div className="min-h-screen px-6 py-8 bg-white flex flex-col items-center">
+        <div className="productContainer">
             
-            <div className="flex gap-3 items-center mb-8">
-                <div className="flex items-center border-2 border-green-400 rounded-full px-4 py-2 w-80 shadow-sm bg-white">
-                    <input type="text" placeholder="Search...."  className="flex-grow outline-none bg-transparent text-gray-700" value={searchText} onChange={(e) => setSearchText(e.target.value)}/>
+            <div className="searchAndFilter">
+                <div className="searchBox">
+                    <input type="text" placeholder="Search...."  className="Search" value={searchText} onChange={(e) => setSearchText(e.target.value)}/>
                 </div>
 
-                <select className="border-2 border-green-400 rounded-full px-4 py-2 shadow-sm" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
+                <select className="filterBox" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
                     <option value="all">All</option>
                     <option value="men's clothing">Men</option>
                     <option value="women's clothing">Women</option>
@@ -62,25 +62,26 @@ const Product = () => {
                 </select>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="">
                 {filteredProducts.map((product) => (
-                    <div key={product.id} className="border border-green-200 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all bg-gray-50 flex flex-col gap-5">
+                    <div key={product.id} className="productCardContainer">
                         
-                            <div className="bg-gray-50 h-52 flex items-center justify-center p-6">
-                                <img src={product.image} alt={product.title} className="object-contain max-h-full max-w-full"/>
+                            <div className="">
+                                <img src={product.image} alt={product.title} className="proTitle"/>
                             </div>
                         
-                        <div className="p-4 flex flex-col flex-grow gap-3">
-                            <div className="flex items-center justify-between mb-2">
-                                <span className="text-gray-500 text-xs">${product.price}</span>
-                                <span className="text-gray-500 text-xs">{product.category}</span>
+                        <div className="productCard">
+                            <div className="productInfo">
+                                <span className="productPrice">${product.price}</span>
+                                <span className="productCategory">{product.category}</span>
                             </div>
 
-                            <p className="text-gray-800 font-semibold text-sm mb-2 line-clamp-1">{product.title}</p>
+                            <p className="productText">{product.title}</p>
 
-                            <div className="flex justify-between mt-auto">
-                                <button onClick={() => navigate(`/product/${product.id}`)} className="border border-green-300 text-black px-3 py-1 rounded-md text-sm hover:bg-green-400">View Details</button>
-                                <button onClick={() => handleAddToCart(product)} disabled={isInCart(product.id)} className={`px-3 py-1 rounded-md text-sm ${isInCart(product.id) ? "bg-green-800 cursor-not-allowed text-white" : "bg-[#2e7d32] hover:bg-green-700 text-white"}`}>{isInCart(product.id) ? "Added " : "Add to cart"}</button>
+                            <div className="buttonSection">
+                                <button onClick={() => navigate(`/product/${product.id}`)} className="">View Details</button>
+                                <button onClick={() => handleAddToCart(product)} disabled={isInCart(product.id)} className={`cartBtn ${isInCart(product.id) ? "added" : "add"}`}>{isInCart(product.id) ? "Added" : "Add to cart"}</button>
+
                             </div>
                         </div>
                     </div>
