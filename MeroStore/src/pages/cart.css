@@ -31,7 +31,9 @@
     align-items: center;
     border-bottom: 1px solid #eaeaea;
     padding: 15px 0;
+    gap: 20px;
 }
+
 
 .cartTable:last-child {
     border-bottom: none;
@@ -41,7 +43,9 @@
     display: flex;
     align-items: center;
     gap: 30px;
+    flex: 1;   
 }
+
 
 .itemImg {
     width: 100px;
@@ -66,7 +70,10 @@
     color: white;
     cursor: pointer;
     transition: 0.3s;
+    width: 120px;   
+    text-align: center; 
 }
+
 
 .removeBtn:hover {
     background: #d32f2f;

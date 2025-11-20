@@ -54,7 +54,7 @@ const Login = () => {
                     <label htmlFor="password">Password</label>
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} id="password" name="password" placeholder="Enter Your Password" required />
                     
-                    <button>Login</button>
+                    <button className="lognBtn">Login</button>
                     
                     <div className="signupLink">
                         <p>Don't have an account? <a href="/signup">Sign Up</a></p>

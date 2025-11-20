@@ -3,83 +3,75 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f5f5f5;
-    transform: translateY(0);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.mainBox:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    background-color: #e8f5e9;
+    /* light fresh background */
+    font-family: Arial, sans-serif;
 }
 
 .formContainer {
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 30px 40px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     width: 100%;
-    max-width: 400px;
-    text-align: center;
+    max-width: 380px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .formContainer h2 {
+    text-align: center;
     margin-bottom: 25px;
     font-size: 22px;
-    color: black;
+    font-weight: bold;
+    color: #333;
 }
 
-label {
-    display: block;
-    text-align: left;
+.formContainer form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formContainer label {
     margin-bottom: 5px;
     font-weight: bold;
     color: #555;
 }
 
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px 12px;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 10px;
-    box-sizing: border-box;
-    outline: none;
-    transition: 0.3s;
-}
-
-input[type="email"]:focus,
-input[type="password"]:focus {
-    border-color: #2e7d32;
-    box-shadow: 0 0 5px rgba(46, 125, 50, 0.3);
-}
-
-button {
-    width: 100%;
+.formContainer input {
     padding: 10px;
-    background-color: #2e7d32;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border 0.3s ease;
 }
 
-button:hover {
-    background-color: #256628;
+.formContainer input:focus {
+    border-color: #43a047;
+    outline: none;
+}
+
+.lognBtn {
+    padding: 10px;
+    background-color: #43a047;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.lognBtn:hover {
+    background-color: #388e3c;
 }
 
 .signupLink {
     margin-top: 15px;
-    font-size: 14px;
-    color: #555;
+    text-align: center;
 }
 
 .signupLink a {
-    color: #2e7d32;
+    color: #43a047;
     text-decoration: none;
     font-weight: bold;
 }
