@@ -46,15 +46,6 @@ const Product = () => {
         return matchSearch && matchCategory;
     });
 
-        if (!products ) {
-        return (
-            <div className="loadingContainer">
-                <div className="loader"></div>
-                <p>Loading products...</p>
-            </div>
-        );
-    }
-
     return (
         <div className="productContainer">
             

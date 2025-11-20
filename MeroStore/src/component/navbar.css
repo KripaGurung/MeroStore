@@ -45,9 +45,14 @@
 }
 
 .userName {
+    background-color: #2e7d32;
     font-weight: bold;
-    color: #333;
-    margin: 0;
+    color: white;
+    padding: 7px;
+    border-radius: 15px;
+    width: 55px;
+    height: 40px;
+    border: 1px solid green;
 }
 
 .Button {
