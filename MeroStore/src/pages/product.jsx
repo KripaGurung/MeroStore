@@ -80,9 +80,8 @@ const Product = () => {
                             <p className="productText">{product.title}</p>
 
                             <div className="buttonSection">
-                                <button onClick={() => navigate(`/product/${product.id}`)} className="">View Details</button>
+                                <button onClick={() => navigate(`/product/${product.id}`)}>View Details</button>
                                 <button onClick={() => handleAddToCart(product)} disabled={isInCart(product.id)} className={`cartBtn ${isInCart(product.id) ? "added" : "add"}`}>{isInCart(product.id) ? "Added" : "Add to cart"}</button>
-
                             </div>
                         </div>
                     </div>
