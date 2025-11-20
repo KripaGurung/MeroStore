@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import "./productdetails.css";
 
 const ProductDetails = () => {
     const { id } = useParams(); 
@@ -28,19 +29,19 @@ const ProductDetails = () => {
     };
     
     if (!product) {
-        return <div className="text-center mt-10 text-gray-600">Loading...</div>;
+        return <div className="Load">Loading...</div>;
     }
     
     return (
-        <div className="min-h-screen bg-gray-100 p-6">
-            <div onClick={() => navigate(-1)} className="text-xl cursor-pointer mb-4 inline-block bg-white p-2 rounded-full shadow hover:bg-gray-200 transition">←</div>
-            <div className="max-w-5xl mx-auto bg-white rounded-xl shadow-md p-6 flex gap-9">
-                <img src={product.image} alt="image" className="w-64 h-64 object-contain rounded-lg bg-gray-100"/>
+        <div className="productDetailsContainer">
+            <div onClick={() => navigate(-1)} className="arrowBtn">←</div>
+            <div className="productImage">
+                <img src={product.image} alt="image" className="picture"/>
                 <div>
-                    <h1 className="text-2xl font-semibold text-gray-800 mb-2">{product.title}</h1>
-                    <p className="text-justify text-gray-600 mb-4">{product.description}</p>
-                    <p className="text-lg font-bold text-green-600 mb-3">$ {product.price}</p>
-                    <button onClick={() => handleAddToCart(product)} disabled={isInCart(product.id)} className={`px-3 py-1 rounded-md text-sm ${isInCart(product.id) ? "bg-green-800 cursor-not-allowed text-white" : "bg-[#2e7d32] hover:bg-green-700 text-white"}`}>{isInCart(product.id) ? "Added " : "Add to cart"}</button>
+                    <h1 className="pTitle">{product.title}</h1>
+                    <p className="pDescription">{product.description}</p>
+                    <p className="pPrice">$ {product.price}</p>
+                    <button onClick={() => handleAddToCart(product)} disabled={isInCart(product.id)} className={`cartBtn ${isInCart(product.id) ? "added" : "add"}`}>{isInCart(product.id) ? "Added" : "Add to cart"}</button>
                 </div>
             </div>
         </div>
