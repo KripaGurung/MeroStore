@@ -74,11 +74,12 @@
 }
 
 .productCategory {
-    background-color: #f8f9fa;
+    background-color: #e2e3e4;
     padding: 4px 8px;
     border-radius: 4px;
     font-size: 12px;
     text-transform: capitalize;
+    margin-top: 13px;
 }
 
 .productText {

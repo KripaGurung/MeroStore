@@ -24,30 +24,30 @@ const Cart = () => {
     const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
     
     return (
-        <div className="min-h-screen bg-white px-6 py-8">
-            <h1 className="text-2xl font-semibold mb-6">Your Cart</h1>
+        <div className="cartContainer">
+            <h1 className="H1">Your Cart</h1>
             {cartItems.length === 0 ? (
-                <p className="text-gray-500 text-lg">Your cart is empty.</p>
+                <p className="cartMsg">Your cart is empty.</p>
                 ) : (
-                <div className="space-y-4">
+                <div className="cartBox">
                     {cartItems.map((item, index) => (
-                        <div key={index} className="flex items-center justify-between border p-4 rounded-xl shadow-sm bg-gray-50">
-                            <div className="flex gap-4 items-center">
-                                <img src={item.image} alt={item.title} className="w-20 h-20 object-contain"/>
+                        <div key={index} className="cartTable">
+                            <div className="imgBox">
+                                <img src={item.image} alt={item.title} className="itemImg"/>
                 
                                 <div>
-                                    <p className="font-medium text-gray-800">{item.title}</p>
-                                    <p className="text-gray-600 text-sm">${item.price}</p>
+                                    <p className="itemTitle">{item.title}</p>
+                                    <p className="itemPrice">${item.price}</p>
                                 </div>
                             </div>
                 
-                            <button onClick={() => handleRemove(item)} className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 text-sm">Remove</button>
+                            <button onClick={() => handleRemove(item)} className="removeBtn">Remove</button>
                         </div>
                     ))}
                 
-                    <div className="text-xl font-semibold mt-6">
+                    <div className="totalBox">
                         Total:{" "}
-                        <span className="text-green-700">${totalPrice.toFixed(2)}</span>
+                        <span className="totalPrice">${totalPrice.toFixed(2)}</span>
                     </div>
                 </div>
             )}
