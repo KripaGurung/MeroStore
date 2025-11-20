@@ -33,6 +33,7 @@ label {
     display: block;
     text-align: left;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 input[type="email"],
@@ -42,7 +43,7 @@ input[type="password"] {
     margin-bottom: 20px;
     border-radius: 6px;
     border: 1px solid #ccc;
-    font-size: 14px;
+    font-size: 10px;
     box-sizing: border-box;
     outline: none;
     transition: 0.3s;

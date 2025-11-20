@@ -1,0 +1,77 @@
+.registerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.registerContainer {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.registerContainer h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 22px;
+    color: black;
+}
+
+.registerContainer form {
+    display: flex;
+    flex-direction: column;
+}
+
+.registerContainer label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.registerContainer input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.registerContainer input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.signBtn {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.signBtn:hover {
+    background-color: #45a049;
+}
+
+.loginLink {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.loginLink a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.loginLink a:hover {
+    text-decoration: underline;
+}
