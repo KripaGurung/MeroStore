@@ -135,20 +135,10 @@ const Product = () => {
         <div className="productContainer">
             <div className="searchAndFilter">
                 <div className="searchBox">
-                    <input 
-                        type="text" 
-                        placeholder="Search...."  
-                        className="Search" 
-                        value={searchText} 
-                        onChange={(e) => setSearchText(e.target.value)}
-                    />
+                    <input type="text" placeholder="Search...."  className="Search" value={searchText} onChange={(e) => setSearchText(e.target.value)}/>
                 </div>
 
-                <select 
-                    className="filterBox" 
-                    value={selectedCategory} 
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                >
+                <select className="filterBox" value={selectedCategory}  onChange={(e) => setSelectedCategory(e.target.value)}>
                     <option value="all">All</option>
                     <option value="men's clothing">Men</option>
                     <option value="women's clothing">Women</option>
@@ -174,21 +164,10 @@ const Product = () => {
                             <p className="productText">{product.title}</p>
 
                             <div className="buttonSection">
-                                <button onClick={() => navigate(`/product/${product.id}`)}>
-                                    View Details
-                                </button>
-
-                                <button 
-                                    onClick={() => handleAddToCart(product)}
-                                    disabled={isInCart(product.id)}
-                                    className={`cartBtn ${isInCart(product.id) ? "added" : "add"}`}
-                                >
-                                    {isInCart(product.id) ? "Added" : "Add to cart"}
-                                </button>
-
+                                <button onClick={() => navigate(`/product/${product.id}`)}>View Details</button>
+                                <button onClick={() => handleAddToCart(product)} disabled={isInCart(product.id)} className={`cartBtn ${isInCart(product.id) ? "added" : "add"}`}>{isInCart(product.id) ? "Added" : "Add to cart"}</button>
                             </div>
                         </div>
-
                     </div>
                 ))}
             </div>

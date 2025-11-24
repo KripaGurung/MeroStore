@@ -60,11 +60,7 @@ const Navbar = () => {
         <ul className="navLinks">
           <li onClick={() => navigate("/home")}>Home</li>
           <li onClick={() => navigate("/product")}>Products</li>
-
-          {/* 🛒 Cart count added here */}
-          <li onClick={() => navigate("/cart")}>
-            Cart ({cartItems.length})
-          </li>
+          <li onClick={() => navigate("/cart")}>Cart ({cartItems.length})</li>
         </ul>
 
         <div className="navSection">

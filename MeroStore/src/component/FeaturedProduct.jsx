@@ -63,14 +63,11 @@ import { addToCart } from "../redux/slices/cartSlice";
 const FeaturedProduct = () => {
   const dispatch = useDispatch();
 
-  // Get products and cart from Redux
   const products = useSelector((state) => state.product.products);
   const cartItems = useSelector((state) => state.cart.items);
 
-  // Check if product is already in cart
   const isInCart = (id) => cartItems.some((item) => item.id === id);
 
-  // Add product to cart
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
     alert(`${product.title} added to cart!`);
@@ -92,13 +89,7 @@ const FeaturedProduct = () => {
               <p className="productTitle">{product.title}</p>
               <p className="productPrice">${product.price}</p>
 
-              <button
-                onClick={() => handleAddToCart(product)}
-                disabled={isInCart(product.id)}
-                className={isInCart(product.id) ? "btn addedBtn" : "btn addBtn"}
-              >
-                {isInCart(product.id) ? "Added" : "Add to cart"}
-              </button>
+              <button onClick={() => handleAddToCart(product)} disabled={isInCart(product.id)} className={isInCart(product.id) ? "btn addedBtn" : "btn addBtn"}>{isInCart(product.id) ? "Added" : "Add to cart"}</button>
             </div>
           </div>
         ))}

@@ -94,9 +94,7 @@ const Cart = () => {
                 </div>
               </div>
 
-              <button onClick={() => handleRemove(item)} className="removeBtn">
-                Remove
-              </button>
+              <button onClick={() => handleRemove(item)} className="removeBtn">Remove</button>
             </div>
           ))}
 

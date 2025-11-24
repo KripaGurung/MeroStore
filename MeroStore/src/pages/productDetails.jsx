@@ -87,13 +87,7 @@ const ProductDetails = () => {
           <p className="pDescription">{product.description}</p>
           <p className="pPrice">$ {product.price}</p>
 
-          <button
-            onClick={handleAddToCart}
-            disabled={isInCart(product.id)}
-            className={`cartBtn ${isInCart(product.id) ? "added" : "add"}`}
-          >
-            {isInCart(product.id) ? "Added" : "Add to cart"}
-          </button>
+          <button onClick={handleAddToCart} disabled={isInCart(product.id)} className={`cartBtn ${isInCart(product.id) ? "added" : "add"}`}>{isInCart(product.id) ? "Added" : "Add to cart"}</button>
         </div>
       </div>
     </div>
