@@ -8,11 +8,21 @@ import Footer from './component/footer.jsx';
 import Product from './pages/product.jsx';
 import Cart from './pages/cart.jsx';
 import ProductDetails from './pages/productDetails.jsx';
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { setProducts } from "./redux/slices/productSlice";
 
 function AppContent() {
   const location = useLocation();
   const navbarPaths = ['/', '/signup'];
   const footerPaths = ['/', '/signup'];
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then(res => res.json())
+      .then(data => dispatch(setProducts(data)));
+  }, []);
 
   return (
     <>
@@ -42,3 +52,4 @@ function App() {
 }
 
 export default App;
+

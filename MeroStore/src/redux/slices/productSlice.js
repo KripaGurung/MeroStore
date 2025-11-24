@@ -6,10 +6,10 @@ const productSlice = createSlice({
     products: [],
   },
   reducers: {
-    setProducts(state, action) {
+    setProducts: (state, action) => {
       state.products = action.payload;
-    },
-  },
+    }
+  }
 });
 
 export const { setProducts } = productSlice.actions;
