@@ -64,7 +64,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart } from "../redux/slices/cartSlice";
 
 const Cart = () => {
-  const cartItems = useSelector((state) => state.cart.items);
+  const cartItems = useSelector(state => state.cart.items);
   const dispatch = useDispatch();
 
   const handleRemove = (item) => {

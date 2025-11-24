@@ -106,6 +106,7 @@ const Product = () => {
     const navigate = useNavigate();
 
     const products = useSelector((state) => state.product.products);
+    const cartItems = useSelector((state) => state.cart.items);
 
     const [selectedCategory, setSelectedCategory] = useState("all");
     const [searchText, setSearchText] = useState("");
@@ -120,6 +121,8 @@ const Product = () => {
         dispatch(addToCart(product));
         alert(`${product.title} added to cart!`);
     };
+
+    const isInCart = (id) => cartItems.some(item => item.id === id);
 
     const filteredProducts = products.filter((p) => {
         const search = searchText.toLowerCase();
@@ -177,8 +180,10 @@ const Product = () => {
 
                                 <button 
                                     onClick={() => handleAddToCart(product)}
+                                    disabled={isInCart(product.id)}
+                                    className={`cartBtn ${isInCart(product.id) ? "added" : "add"}`}
                                 >
-                                    Add to cart
+                                    {isInCart(product.id) ? "Added" : "Add to cart"}
                                 </button>
 
                             </div>

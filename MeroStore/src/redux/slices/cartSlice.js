@@ -5,22 +5,19 @@ const cartSlice = createSlice({
   initialState: {
     items: [],
   },
-
   reducers: {
     addToCart: (state, action) => {
-      state.items.push(action.payload);
+      if (!state.items.some(item => item.id === action.payload.id)) {
+        state.items.push(action.payload);
+      }
     },
-
     removeFromCart: (state, action) => {
-      state.items = state.items.filter(
-        (item) => item.id !== action.payload
-      );
+      state.items = state.items.filter(item => item.id !== action.payload);
     },
-
     clearCart: (state) => {
       state.items = [];
     }
-  },
+  }
 });
 
 export const { addToCart, removeFromCart, clearCart } = cartSlice.actions;
