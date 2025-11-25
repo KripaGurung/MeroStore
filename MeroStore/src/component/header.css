@@ -1,4 +1,4 @@
-.headerContainer {
+.header-container {
     display: flex;
     align-items: center;
     padding: 40px;
@@ -8,26 +8,26 @@
     margin: 30px auto;
 }
 
-.textContainer {
+.text-container {
     flex: 1;
     padding-right: 30px;
 }
 
-.textOne {
+.text-one {
     font-size: 40px;
     font-weight: bold;
     color: #2d5016;
     margin-bottom: 15px;
 }
 
-.textTwo {
+.text-two {
     font-size: 16px;
     color: #4a7c2a;
     line-height: 1.5;
     margin-bottom: 25px;
 }
 
-.shopButton {
+.shop-button {
     background-color:#2e7d32;
     color: white;
     border: none;
@@ -38,16 +38,16 @@
     width: 250px;
 }
 
-.shopButton:hover {
+.shop-button:hover {
     background-color: #008236;
 }
 
-.imageContainer {
+.image-container {
     flex: 1;
     text-align: center;
 }
 
-.imageContainer img {
+.image-container img {
     max-width: 100%;
     height: auto;
 }

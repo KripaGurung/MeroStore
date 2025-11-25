@@ -1,4 +1,4 @@
-.productDetailsContainer {
+.product-details-container {
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
@@ -9,7 +9,7 @@
     font-family: Arial, sans-serif;
 }
 
-.arrowBtn {
+.arrow-btn {
     font-size: 24px;
     width: 40px;
     height: 40px;
@@ -23,11 +23,11 @@
     transition: 0.3s;
 }
 
-.arrowBtn:hover {
+.arrow-btn:hover {
     background: #ddd;
 }
 
-.productImage {
+.product-image {
     display: flex;
     gap: 30px;
     align-items: flex-start;
@@ -41,13 +41,13 @@
     padding: 10px;
 }
 
-.pTitle {
+.p-title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.pDescription {
+.p-description {
     font-size: 18px;
     color: #555;
     margin-bottom: 15px;
@@ -56,13 +56,13 @@
     padding-right: 20px;
 }
 
-.pPrice {
+.p-price {
     font-size: 20px;
     color: green;
     margin-bottom: 20px;
 }
 
-.cartBtn {
+.cart-btn {
     padding: 10px 20px;
     border-radius: 6px;
     border: none;

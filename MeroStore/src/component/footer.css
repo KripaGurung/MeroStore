@@ -1,9 +1,9 @@
-.mainContainer {
+.main-container {
     padding: 30px 20px 10px;
     margin-top: 50px;
 }
 
-.footerContainer {
+.footer-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -12,12 +12,12 @@
     justify-content: space-between;
 }
 
-.footerDescription {
+.footer-description {
     flex: 1;
     min-width: 300px;
 }
 
-.logoContainer {
+.logo-container {
     margin-bottom: 15px;
 }
 
@@ -33,7 +33,7 @@
     max-width: 400px;
 }
 
-.footerLinks {
+.footer-links {
     min-width: 150px;
 }
 
@@ -44,24 +44,24 @@
     font-size: 18px;
 }
 
-.linkList {
+.link-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.linkList li {
+.link-list li {
     margin-bottom: 8px;
     color: #666;
     cursor: pointer;
     transition: color 0.3s;
 }
 
-.linkList li:hover {
+.link-list li:hover {
     color: #28a745;
 }
 
-.footerBottom {
+.footer-bottom {
     max-width: 1200px;
     margin: 30px auto 0;
     padding-top: 20px;
@@ -69,7 +69,7 @@
     text-align: center;
 }
 
-.sentenceOne {
+.sentence-one {
     color: #666;
     font-size: 14px;
 }

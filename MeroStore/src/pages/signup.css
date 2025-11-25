@@ -1,4 +1,4 @@
-.registerBox {
+.register-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,7 +7,7 @@
     font-family: Arial, sans-serif;
 }
 
-.registerContainer {
+.register-container {
     background-color: #fff;
     padding: 30px 40px;
     border-radius: 10px;
@@ -16,25 +16,25 @@
     max-width: 400px;
 }
 
-.registerContainer h2 {
+.register-container h2 {
     text-align: center;
     margin-bottom: 25px;
     font-size: 22px;
     color: black;
 }
 
-.registerContainer form {
+.register-container form {
     display: flex;
     flex-direction: column;
 }
 
-.registerContainer label {
+.register-container label {
     margin-bottom: 5px;
     font-weight: bold;
     color: #555;
 }
 
-.registerContainer input {
+.register-container input {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -42,12 +42,12 @@
     font-size: 14px;
 }
 
-.registerContainer input:focus {
+.register-container input:focus {
     border-color: #4CAF50;
     outline: none;
 }
 
-.signBtn {
+.sign-btn {
     padding: 10px;
     background-color: #4CAF50;
     color: #fff;
@@ -58,20 +58,20 @@
     transition: background 0.3s;
 }
 
-.signBtn:hover {
+.sign-btn:hover {
     background-color: #45a049;
 }
 
-.loginLink {
+.login-link {
     margin-top: 15px;
     text-align: center;
 }
 
-.loginLink a {
+.login-link a {
     color: #4CAF50;
     text-decoration: none;
 }
 
-.loginLink a:hover {
+.login-link a:hover {
     text-decoration: underline;
 }

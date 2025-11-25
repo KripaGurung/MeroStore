@@ -8,15 +8,15 @@ const Header = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="headerContainer">
+        <div className="header-container">
             
-            <div className="textContainer">
-                <p className="textOne">Shop smarter with us</p>
-                <p className="textTwo">Explore quality products, amazing deals and fast delivery all at your fingertips. Your one-stop online shopping destination !</p>
-                <button onClick={() => navigate("/product")} className="shopButton">Start Shopping</button>
+            <div className="text-container">
+                <p className="text-one">Shop smarter with us</p>
+                <p className="text-two">Explore quality products, amazing deals and fast delivery all at your fingertips. Your one-stop online shopping destination !</p>
+                <button onClick={() => navigate("/product")} className="shop-button">Start Shopping</button>
             </div>
 
-            <div className="imageContainer">
+            <div className="image-container">
                 <img src={assets.home} alt="home" className="image"/>
             </div>
         </div>

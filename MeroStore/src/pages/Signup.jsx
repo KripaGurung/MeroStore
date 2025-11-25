@@ -118,8 +118,8 @@ const Register = () => {
     };
 
     return (
-        <div className="registerBox">
-            <div className="registerContainer">
+        <div className="register-box">
+            <div className="register-container">
                 <h2>Registration Form</h2>
 
                 <form onSubmit={handleSubmit} id="registerForm">
@@ -135,9 +135,9 @@ const Register = () => {
                     <label>Confirm Password</label>
                     <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
 
-                    <button className="signBtn">Sign Up</button>
+                    <button className="sign-Btn">Sign Up</button>
 
-                    <div className="loginLink">
+                    <div className="login-Link">
                         <p>Already have an account? <a href="/">Login</a></p>
                     </div>
                 </form>
