@@ -135,7 +135,7 @@ const Register = () => {
                     <label>Confirm Password</label>
                     <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
 
-                    <button className="sign-Btn">Sign Up</button>
+                    <button className="sign-btn">Sign Up</button>
 
                     <div className="login-Link">
                         <p>Already have an account? <a href="/">Login</a></p>

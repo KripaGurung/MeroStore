@@ -54,7 +54,7 @@ const Login = () => {
                     <label>Password</label>
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
 
-                    <button className="lognBtn">Login</button>
+                    <button className="logn-btn">Login</button>
 
                     <div className="signup-link">
                         <p>Don't have an account? <a href="/signup">Sign Up</a></p>

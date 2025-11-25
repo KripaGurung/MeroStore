@@ -4,6 +4,7 @@ import "./product.css";
 import { useSelector, useDispatch } from "react-redux";
 import { setProducts } from "../redux/slices/productSlice";
 import { addToCart } from "../redux/slices/cartSlice";
+import axios from "axios";
 
 const Product = () => {
 
@@ -15,13 +16,13 @@ const Product = () => {
 
     const [selectedCategory, setSelectedCategory] = useState("all");
     const [searchText, setSearchText] = useState("");
-
+    
     useEffect(() => {
-        fetch("https://fakestoreapi.com/products")
-            .then(res => res.json())
-            .then(data => dispatch(setProducts(data)));
-           
-    }, []);
+        axios.get("https://fakestoreapi.com/products")
+        .then(res => dispatch(setProducts(res.data)))
+        .catch(err => console.error("Error fetching products:", err));
+    }, [dispatch]);
+
 
     const handleAddToCart = (product) => {
         dispatch(addToCart(product));
