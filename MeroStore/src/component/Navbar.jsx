@@ -10,7 +10,7 @@ const Navbar = () => {
   const user = useSelector((state) => state.auth.user);
   const isLoggedIn = useSelector((state) => state.auth.isAuthenticated);
 
-  const cartItems = useSelector((state) => state.cart.items);
+  // const cartItems = useSelector((state) => state.cart.items);
 
   return (
     <div className="nav-container">
@@ -20,7 +20,8 @@ const Navbar = () => {
         <ul className="nav-links">
           <li onClick={() => navigate("/home")}>Home</li>
           <li onClick={() => navigate("/product")}>Products</li>
-          <li onClick={() => navigate("/cart")}>Cart ({cartItems.length})</li>
+          {/* <li onClick={() => navigate("/cart")}>Cart ({cartItems.length})</li> */}
+           <li onClick={() => navigate("/cart")}>Cart </li>
         </ul>
 
         <div className="nav-section">

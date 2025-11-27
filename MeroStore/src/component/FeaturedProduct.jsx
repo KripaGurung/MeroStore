@@ -1,11 +1,16 @@
 import React from "react";
+import { useEffect } from "react";
 import "./Featuredproduct.css";
+import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../redux/slices/cartSlice";
+import { setLoading, setProducts, setError } from "../redux/slices/productSlice";
+
 
 const FeaturedProduct = () => {
   const dispatch = useDispatch();
 
+  const loading = useSelector((state) => state.product.loading);
   const products = useSelector((state) => state.product.products);
   const cartItems = useSelector((state) => state.cart.items);
 
@@ -15,6 +20,22 @@ const FeaturedProduct = () => {
     dispatch(addToCart(product));
     alert(`${product.title} added to cart!`);
   };
+
+   useEffect(() => {
+    if (products.length === 0) { dispatch(setLoading());
+      
+      axios.get("https://fakestoreapi.com/products")
+        .then((res) => dispatch(setProducts(res.data)))
+        .catch((err) => {
+          console.log(err);
+          dispatch(setError("Failed to load products"));
+        });
+    }
+  }, [products, dispatch]);
+
+  if (loading) {
+    return <h2 className="loading-text">Loading featured products...</h2>;
+  }
 
   return (
     <div className="main-container">
