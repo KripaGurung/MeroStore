@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { loginSuccess } from "../redux/slices/authSlice";
 import "./login.css";
+import {toast} from "react-toastify";
 
 const Login = () => {
 
@@ -17,23 +18,23 @@ const Login = () => {
         e.preventDefault();
 
         if (!user) {
-            alert("No user found, Please Sign Up first!");
+            toast.error("No user found, Please Sign Up first!");
             return;
         }
 
         if (email !== user.email) {
-            alert("Email does not match!");
+            toast.error("Email does not match!");
             return;
         }
 
         if (password !== user.password) {
-            alert("Password does not match!");
+            toast.error("Password does not match!");
             return;
         }
 
         dispatch(loginSuccess());
 
-        alert("Login Successful!");
+        toast.success("Login Successful!");
         navigate("/home");
 
         setEmail("");
