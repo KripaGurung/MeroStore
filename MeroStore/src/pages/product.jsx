@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setProducts } from "../redux/slices/productSlice";
 import { addToCart } from "../redux/slices/cartSlice";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const Product = () => {
 
@@ -26,7 +27,7 @@ const Product = () => {
 
     const handleAddToCart = (product) => {
         dispatch(addToCart(product));
-        alert(`${product.title} added to cart!`);
+        toast.success(`${product.title} added to cart!`);
     };
 
     const isInCart = (id) => cartItems.some(item => item.id === id);
