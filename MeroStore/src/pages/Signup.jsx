@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { registerUser } from "../redux/slices/authSlice";
 import "./signup.css";
+import { toast } from "react-toastify";
 
 const Register = () => {
 
@@ -18,12 +19,12 @@ const Register = () => {
         e.preventDefault();
 
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            alert("Invalid email format!");
+            toast.error("Invalid email format!");
             return;
         }
 
         if (password !== confirmPassword) {
-            alert("Passwords do not match!");
+            toast.error("Passwords do not match!");
             return;
         }
 
@@ -31,7 +32,7 @@ const Register = () => {
 
         dispatch(registerUser(userData));
 
-        alert("Registration successful!");
+         toast.success("Registration successful!");
         navigate("/");
 
         setName("");
