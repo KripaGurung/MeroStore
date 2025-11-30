@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import "./productdetails.css";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../redux/slices/cartSlice";
+import { toast } from "react-toastify";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -19,7 +20,7 @@ const ProductDetails = () => {
 
   const handleAddToCart = () => {
     dispatch(addToCart(product));
-    alert(`${product.title} added to cart!`);
+    toast.success(`${product.title} added to cart!`);
   };
 
   const isInCart = (id) => cartItems.some(item => item.id === id);
