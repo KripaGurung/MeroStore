@@ -2,16 +2,17 @@ import React from "react";
 import "./cart.css";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart } from "../redux/slices/cartSlice";
+import { toast } from "react-toastify";
 
 const Cart = () => {
   const cartItems = useSelector(state => state.cart.items);
   const dispatch = useDispatch();
-
+  
   const handleRemove = (item) => {
-    const confirmed = window.confirm("Remove this item?");
-    if (!confirmed) return;
-
+    if (!window.confirm("Remove this item?")) return;
+    
     dispatch(removeFromCart(item.id));
+    toast.success(`${item.title} removed from cart!`);
   };
 
   const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
