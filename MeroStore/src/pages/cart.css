@@ -89,3 +89,24 @@
 .total-price {
     color: #2e7d32;
 }
+
+.pay-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pay-btn:hover {
+    background-color: #218838;
+}
+
+.pay-container {
+    margin-top: 15px;
+    text-align: right;
+}
