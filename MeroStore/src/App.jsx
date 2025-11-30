@@ -8,6 +8,8 @@ import Footer from './component/footer.jsx';
 import Product from './pages/product.jsx';
 import Cart from './pages/cart.jsx';
 import ProductDetails from './pages/productDetails.jsx';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 function AppContent() {
@@ -19,6 +21,9 @@ function AppContent() {
 
   return (
     <>
+
+    <ToastContainer position="top-center" autoClose={2000} />
+    
     {!navbarPaths.includes(location.pathname) && <Navbar />}
 
       <Routes>
